@@ -1,0 +1,743 @@
+
+/* ========================= */
+/*       FONT BRUSHER        */
+/* ========================= */
+@font-face {
+    font-family: "Brusher";
+    src: url("font/Brusher.ttf") format("truetype");
+}
+/* ========================= */
+/*       STILE GENERALE      */
+/* ========================= */
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background:
+linear-gradient(
+    rgba(201, 169, 148, 0.65),
+    rgba(201, 169, 148, 0.65)
+),
+        url("sfondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    margin: 0;
+}
+/* ========================= */
+/*          HEADER           */
+/* ========================= */
+header {
+    background-color: transparent;
+    color: #FFF0F1;
+    text-align: center;
+    padding: 30px 15px;
+}
+header h1 {
+    font-family: "Brusher", cursive;
+    font-size: 56px;
+    font-weight: normal;
+    color: #FFF0F1;
+    margin: 0;
+}
+header p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #FFF0F1;
+    margin-bottom: 0;
+}
+/* ========================= */
+/*        NAVIGAZIONE        */
+/* ========================= */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background-color: transparent;
+}
+nav a {
+    background-color: #59483d;
+    color: #FFF0F1;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+nav a:hover,
+nav a:focus-visible {
+    background-color:  #3b3028;;
+    color: #ffffff;
+}
+/* ========================= */
+/*           MAIN            */
+/* ========================= */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+section {
+    margin-bottom: 35px;
+}
+section h2 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: #F2E8D5;
+    margin-bottom: 20px;
+}
+section h2 .inglese {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: inherit;
+    font-weight: normal;
+    color: #F2E8D5;
+}
+/* ========================= */
+/*       SCHEDA PIATTO       */
+/* ========================= */
+.piatto {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(rgba(242, 232, 213, 0.60), rgba(242, 232, 213, 0.60)), url("sfondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+/* FOTO DEL PIATTO */
+.piatto img {
+    width: 40%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+/* INFORMAZIONI DEL PIATTO */
+.info-piatto {
+    flex: 1;
+    min-width: 0;
+}
+/* ========================= */
+/*       NOME DEL PIATTO     */
+/* ========================= */
+.info-piatto h3 {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: bold;
+    color: #3b3028;
+    margin: 0;
+    line-height: 1.4;
+}
+/* ========================= */
+/*          ALLERGENI        */
+/* ========================= */
+.numeri-allergeni {
+    display: inline;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+    color: #59483d;
+    background: none;
+    padding: 0;
+    margin-left: 4px;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+/* ========================= */
+/*   TRADUZIONE DEL TITOLO   */
+/* ========================= */
+.titolo-inglese {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #65483e;
+    margin-top: 4px;
+    margin-bottom: 14px;
+}
+/* ========================= */
+/*    INGREDIENTI ITALIANI   */
+/* ========================= */
+.descrizione {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #3b3028;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+/* ========================= */
+/*    INGREDIENTI INGLESI    */
+/* ========================= */
+.info-piatto .inglese {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 13px;
+    color: #65483e;
+    line-height: 1.5;
+    margin-top: 0;
+}
+/* ========================= */
+/*           PREZZO          */
+/* ========================= */
+.prezzo {
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    color: #3b3028;
+    margin-bottom: 0;
+}
+/* ========================= */
+/*      CARNE ALLA GRIGLIA   */
+/* ========================= */
+.tipo-carne {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #D5BC91;
+}
+.tipo-carne h4 {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    color: #3b3028;
+    margin: 0;
+}
+.tipo-carne .titolo-inglese {
+    margin-bottom: 6px;
+}
+.tipo-carne .prezzo {
+    margin-top: 5px;
+}
+/* ========================= */
+/*      LEGENDA ALLERGENI    */
+/* ========================= */
+#legenda-allergeni {
+    background-color: #F2E8D5;
+    padding: 25px;
+    border-radius: 12px;
+}
+#legenda-allergeni h2 {
+    color: #3b3028;
+    margin-top: 0;
+}
+.introduzione-allergeni {
+    color: #3b3028;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.lingua-allergeni {
+    margin-top: 15px;
+    border: 1px solid #D5BC91;
+    border-radius: 8px;
+    padding: 12px;
+}
+.lingua-allergeni summary {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3b3028;
+    cursor: pointer;
+}
+.lingua-allergeni h3 {
+    font-family: Georgia, serif;
+    color: #3b3028;
+    font-size: 18px;
+}
+.lista-allergeni {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 25px;
+    padding-left: 25px;
+}
+.lista-allergeni li {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #3b3028;
+}
+.lista-allergeni li ol {
+    display: block;
+    padding-left: 20px;
+    margin-top: 6px;
+}
+.lista-allergeni strong {
+    color: #59483d;
+}
+.nota-allergeni,
+.nota-surgelati {
+    font-size: 13px;
+    font-style: italic;
+    color: #3b3028;
+    margin-top: 20px;
+}
+/* ========================= */
+/*           FOOTER          */
+/* ========================= */
+footer {
+    background-color: #3b3028;
+    color: #FFF0F1;
+    text-align: center;
+    padding: 20px;
+}
+/* ========================= */
+/*          SMARTPHONE       */
+/* ========================= */
+@media (max-width: 600px) {
+    header {
+        padding: 25px 12px;
+    }
+    header h1 {
+        font-size: 46px;
+    }
+    nav {
+        gap: 7px;
+        padding: 12px;
+    }
+    nav a {
+        font-size: 13px;
+        padding: 9px 11px;
+    }
+    main {
+        padding: 12px;
+    }
+    section h2 {
+        font-size: 24px;
+    }
+    .piatto {
+        gap: 12px;
+        padding: 12px;
+        align-items: flex-start;
+    }
+    .piatto img {
+        width: 35%;
+        height: 130px;
+    }
+    .info-piatto h3 {
+        font-size: 18px;
+    }
+    .titolo-inglese {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .descrizione {
+        font-size: 13px;
+    }
+    .info-piatto .inglese {
+        font-size: 12px;
+    }
+    .prezzo {
+        font-size: 17px;
+    }
+    .lista-allergeni {
+        grid-template-columns: 1fr;
+    }
+    #legenda-allergeni {
+        padding: 18px;
+    }
+    .lingua-allergeni {
+        padding: 10px;
+    }
+}
+
+/* ========================= */
+/*       NUOVO HEADER        */
+/* ========================= */
+header {
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(
+        180deg,
+        rgba(59, 48, 40, 0.30),
+        rgba(59, 48, 40, 0.65)
+    );
+}
+/* SCRITTA BENVENUTI */
+.decorazione-header {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #D5BC91;
+    margin-bottom: 20px;
+}
+/* NOME DEL RISTORANTE */
+header h1 {
+    font-family: "Brusher", cursive;
+    font-size: 76px;
+    font-weight: normal;
+    color: #FFF0F1;
+    margin: 0;
+    line-height: 1.2;
+}
+/* LINEA DECORATIVA */
+.linea-decorativa {
+    width: 110px;
+    height: 1px;
+    background-color: #D5BC91;
+    margin: 22px auto;
+}
+/* SOTTOTITOLO */
+header .sottotitolo {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-style: italic;
+    color: #F2E8D5;
+    margin: 0 0 12px;
+}
+/* FRASE DI PRESENTAZIONE */
+header .frase-header {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-style: normal;
+    color: #F2E8D5;
+    margin: 0 0 30px;
+}
+/* PULSANTE SCOPRI IL MENU */
+.pulsante-menu {
+    display: inline-block;
+    padding: 13px 28px;
+    border: 1px solid #3B3028;
+    border-radius: 30px;
+    color:#3B3028;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+.pulsante-menu:hover {
+    background-color: #D5BC91;
+    color: #3b3028;
+}
+/* NAVIGAZIONE */
+nav {
+    background-color: rgba(59, 48, 40, 0.50);
+    padding: 18px 15px;
+    gap: 10px;
+}
+/* VERSIONE SMARTPHONE */
+@media (max-width: 600px) {
+    header {
+        min-height: 330px;
+        padding: 50px 15px;
+    }
+    header h1 {
+        font-size: 54px;
+    }
+    .decorazione-header {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+    header .sottotitolo {
+        font-size: 18px;
+    }
+    header .frase-header {
+        font-size: 12px;
+    }
+    .pulsante-menu {
+        padding: 12px 22px;
+        font-size: 11px;
+    }
+}
+/* LOGO PICCOLO E CENTRATO */
+header .logo {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 0 auto 15px;
+}
+/* LOGO SU SMARTPHONE */
+@media (max-width: 600px) {
+    header .logo {
+        width: 70px;
+    }
+}
+
+
+footer {
+    background-color: rgba(59, 48, 40, 0.65);
+    color: #FFF0F1;
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+footer h2 {
+    font-family: "Brusher", cursive;
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+.footer-sottotitolo {
+    font-style: italic;
+    margin-bottom: 30px;
+}
+.footer-contatti {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.footer-contatti div {
+    flex: 1;
+    min-width: 200px;
+}
+.footer-contatti h3 {
+    color: #F2E8D5;
+    margin-bottom: 12px;
+}
+.footer-contatti p {
+    margin: 8px 0;
+}
+.footer-contatti a {
+    color: #FFF0F1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-contatti a:hover {
+    color: #D5BC91;
+}
+.footer-finale {
+    border-top: 1px solid rgba(242, 232, 213, 0.3);
+    padding-top: 20px;
+    font-size: 13px;
+}
+@media (max-width: 600px) {
+    .footer-contatti {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+/* TESTI INGLESI UGUALI A QUELLI ITALIANI */
+.info-piatto > .titolo-inglese {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: bold;
+    color: #3b3028;
+    line-height: 1.4;
+    margin: 0;
+}
+.info-piatto > .inglese:not(.titolo-inglese) {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    color: #3b3028;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+.tipo-carne .titolo-inglese {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: bold;
+    color: #3b3028;
+}
+@media (max-width: 600px) {
+    .info-piatto > .titolo-inglese {
+        font-size: 18px;
+    }
+    .info-piatto > .inglese:not(.titolo-inglese) {
+        font-size: 13px;
+    }
+}
+
+/* ========================= */
+/* STRUMENTI DEL MENU */
+/* ========================= */
+.strumenti-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: rgba(59, 48, 40, 0.75);
+    border: 1px solid #D5BC91;
+    border-radius: 12px;
+}
+#ricerca-piatti {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 15px;
+    border: 1px solid #D5BC91;
+    border-radius: 8px;
+    background-color: #F2E8D5;
+    color: #3b3028;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+#ricerca-piatti:focus {
+    outline: 2px solid #D5BC91;
+}
+#cambia-lingua {
+    padding: 12px 20px;
+    border: 1px solid #D5BC91;
+    border-radius: 8px;
+    background-color: #59483d;
+    color: #FFF0F1;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#cambia-lingua:hover {
+    background-color: #3b3028;
+}
+.filtro-allergeni {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.filtro-allergeni label {
+    color: #F2E8D5;
+    font-size: 14px;
+    white-space: nowrap;
+}
+#seleziona-allergene {
+    padding: 12px;
+    border: 1px solid #D5BC91;
+    border-radius: 8px;
+    background-color: #F2E8D5;
+    color: #3b3028;
+    font-size: 14px;
+    cursor: pointer;
+}
+#messaggio-ricerca {
+    max-width: 1000px;
+    margin: 15px auto;
+    padding: 15px;
+    color: #F2E8D5;
+    text-align: center;
+}
+#messaggio-ricerca[hidden] {
+    display: none;
+}
+/* ========================= */
+/* PULSANTE TORNA SU */
+/* ========================= */
+#torna-su {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #D5BC91;
+    border-radius: 50%;
+    background-color: #59483d;
+    color: #FFF0F1;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s;
+}
+#torna-su:hover {
+    background-color: #3b3028;
+}
+/* ========================= */
+/* VERSIONE SMARTPHONE */
+/* ========================= */
+@media (max-width: 600px) {
+    .strumenti-menu {
+        margin: 15px 12px;
+        padding: 15px;
+        gap: 12px;
+    }
+    #ricerca-piatti {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+    .filtro-allergeni {
+        flex: 1 1 100%;
+        flex-wrap: wrap;
+    }
+    #seleziona-allergene {
+        flex: 1;
+        min-width: 0;
+    }
+    #torna-su {
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+header {
+    background-image:
+        linear-gradient(
+            rgba(59, 48, 40, 0.20),
+            rgba(59, 48, 40, 0.20)
+        ),
+        url("banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header .pulsante-menu {
+    margin-top: 150px;
+}
+header .logo {
+    transform: translateY(-40px);
+}
+header {
+    position: relative;
+}
+header .logo {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    top: auto;
+    width: 60px;
+    height: auto;
+    margin: 0;
+    transform: none;
+}
+@font-face {
+    font-family: "Brusher";
+    src: url("font/Brusher.ttf") format("truetype");
+}
+header .pulsante-menu {
+    background-color:   #3B3028;
+    color:#DFC3B1;
+    font-family: "Brusher", cursive;
+    font-size: 32px;
+    padding: 12px 35px;
+    border: 2px solid #DFC3B1;
+    border-radius: 12px;
+    margin-top: 100px;
+}
+section h2 {
+    color: #3B3028;
+    font-family: "Brusher", cursive;
+    font-size: 45px;
+}
+.piatto {
+    background: linear-gradient(
+        rgba(59, 48, 40, 0.80),
+        rgba(59, 48, 40, 0.80)
+    ), url("sfondo.png");
+    background-size: cover;
+    background-position: center;
+    color: #F2E8D5;
+}
+.piatto h3,
+.piatto p,
+.piatto span,
+.piatto strong {
+    color: #F2E8D5;
+}

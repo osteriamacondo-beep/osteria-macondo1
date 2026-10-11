@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Osteria Macondo - Menu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- INTESTAZIONE -->
+<!-- <header>
+<img src="logo.png" alt="Logo Osteria Macondo" class="logo">
+<a href="#antipasti" class="pulsante-menu">SCOPRI IL MENÙ ↓</a>
+</header> -->
+<header>
+<img src="logo.png" alt="Logo Osteria Macondo" class="logo">
+<a href="#antipasti" class="pulsante-menu">Scopri il menu↓</a>
+</header>
+<!-- MENU DI NAVIGAZIONE -->
+<nav aria-label="Categorie del menu">
+<a href="#antipasti">Antipasti</a>
+<a href="#insalatone">Insalatone</a>
+<a href="#primi">Primi</a>
+<a href="#secondi">Secondi</a>
+<a href="#contorni">Contorni</a>
+<a href="#pizze-rosse">Pizze Rosse</a>
+<a href="#pizze-bianche">Pizze Bianche</a>
+<a href="#dolci">Dolci</a>
+<a href="#bar">Bar</a>
+<a href="#legenda-allergeni">Allergeni</a>
+</nav>
+<div class="strumenti-menu">
+<input type="search" id="ricerca-piatti" placeholder="Cerca un piatto...">
+<button type="button" id="cambia-lingua">EN</button>
+<div class="filtro-allergeni">
+<label for="seleziona-allergene">Escludi allergene:</label>
+<select id="seleziona-allergene">
+<option value="">Nessuno</option>
+<option value="1">1 - Glutine</option>
+<option value="2">2 - Crostacei</option>
+<option value="3">3 - Uova</option>
+<option value="4">4 - Pesce</option>
+<option value="5">5 - Arachidi</option>
+<option value="6">6 - Soia</option>
+<option value="7">7 - Latte</option>
+<option value="8">8 - Frutta a guscio</option>
+<option value="9">9 - Sedano</option>
+<option value="10">10 - Senape</option>
+<option value="11">11 - Sesamo</option>
+<option value="12">12 - Solfiti</option>
+<option value="13">13 - Lupini</option>
+<option value="14">14 - Molluschi</option>
+</select>
+</div>
+</div>
+<p id="messaggio-ricerca" hidden>Nessun piatto trovato.</p>
+<button type="button" id="torna-su" aria-label="Torna all'inizio">↑</button>
+<main>
+<!-- ===================== -->
+<!--       ANTIPASTI       -->
+<!-- ===================== -->
+<section id="antipasti">
+<h2>
+Antipasti
+<span class="inglese">• Appetizers</span>
+</h2>
+<!-- TAGLIERE -->
+<article class="piatto" data-allergeni="1,7,8">
+<img src="img/tagliere.jpg"
+alt="Tagliere misto di formaggi e salumi">
+<div class="info-piatto">
+<h3>Tagliere misto di formaggi e salumi (per due persone) <span class="numeri-allergeni">1, 7, 8</span></h3>
+<p class="titolo-inglese">Charcuterie board (for two persons)</p>
+<p class="descrizione">
+Prosciutto crudo, coppa, pancetta,
+mortadella, pecorino di fossa,
+caciotta al tartufo, mozzarella,
+verdure grigliate, bruschette.
+</p>
+<p class="inglese">
+Parma ham, pork neck, pork belly,
+mortadella, pecorino aged in cave,
+truffle cheese, mozzarella,
+grilled vegetables,
+served with two bruschettas.
+</p>
+<p class="prezzo">
+€ 17,00
+</p>
+</div>
+</article>
+<!-- FRITTO MISTO -->
+<article class="piatto" data-allergeni="1,3,5">
+<img src="img/fritto-verdure.jpg"
+alt="Fritto misto di verdure">
+<div class="info-piatto">
+<h3>
+Fritto misto di verdure
+<span class="numeri-allergeni">1, 3, 5</span>
+</h3>
+<p class="titolo-inglese">
+Mixed fried vegetables
+</p>
+<p class="descrizione">
+Zucchine, carote, cipolla,
+peperoni e verdura di stagione,
+maionese allo zenzero,
+maionese ai lamponi.
+</p>
+<p class="inglese">
+Courgettes, carrots, onions,
+bell pepper, seasonal vegetables,
+served with ginger and
+raspberry mayonnaise.
+</p>
+<p class="prezzo">€ 9,00</p>
+</div>
+</article>
+<!-- TARTARE -->
+<article class="piatto" data-allergeni="1,5,10">
+<img src="img/tartare.jpg"
+alt="Tartare di manzo, carciofi e porro fritto">
+<div class="info-piatto">
+<h3>
+Tartare di manzo, carciofi e porro fritto
+<span class="numeri-allergeni">1, 5, 10</span>
+</h3>
+<p class="titolo-inglese">
+Beef tartare, artichokes and fried leek
+</p>
+<p class="descrizione">
+Manzo, carciofi, porro,
+senape di Dijon,
+salsa Worcestershire,
+limone, capperi.
+</p>
+<p class="inglese">
+Beef, artichokes, leek,
+Dijon mustard, Worcestershire sauce,
+lemon, capers.
+</p>
+<p class="prezzo">€ 16,00</p>
+</div>
+</article>
+<!-- FIORI DI ZUCCA -->
+<article class="piatto" data-allergeni="1,3,5,7">
+<img src="img/fiori-zucca.jpg"
+alt="Fiori di zucca pastellati">
+<div class="info-piatto">
+<h3>
+Fiori di zucca pastellati
+<span class="numeri-allergeni">1, 3, 5, 7</span>
+</h3>
+<p class="titolo-inglese">
+Battered courgette flowers
+</p>
+<p class="descrizione">
+Fiori di zucca, stracciatella,
+maionese di acciughe.
+</p>
+<p class="inglese">
+Battered courgette flowers,
+stracciatella,
+anchovies mayonnaise.
+</p>
+<p class="prezzo">€ 7,00</p>
+</div>
+</article>
+<!-- FOCACCIA -->
+<article class="piatto" data-allergeni="1">
+<img src="img/focaccia.jpg"
+alt="Focaccia">
+<div class="info-piatto">
+<h3>
+Focaccia
+<span class="numeri-allergeni">1</span>
+</h3>
+<p class="titolo-inglese">
+Focaccia bread
+</p>
+<p class="prezzo">€ 5,00</p>
+</div>
+</article>
+<!-- CARCIOFI -->
+<article class="piatto" data-allergeni="5">
+<img src="img/carciofi.jpg"
+alt="Carciofi alla giudia">
+<div class="info-piatto">
+<h3>
+Carciofi alla giudia
+<span class="numeri-allergeni">5</span>
+</h3>
+<p class="titolo-inglese">
+Jewish-style fried artichokes
+</p>
+<p class="descrizione">
+Per la disponibilità
+chiedere al cameriere.
+</p>
+<p class="inglese">
+Ask the waiter if available.
+</p>
+<p class="prezzo">€ 7,00</p>
+</div>
+</article>
+</section>
+<!-- ===================== -->
+<!--       INSALATONE      -->
+<!-- ===================== -->
+<section id="insalatone">
+<h2>
+Insalatone
+<span class="inglese">• Salads</span>
+</h2>
+<!-- BURRATA E POMODORINO -->
+<article class="piatto" data-allergeni="7,8">
+<img src="img/burrata-pomodorino.jpg"
+alt="Burrata e pomodorino">
+<div class="info-piatto">
+<h3>
+Burrata e pomodorino
+<span class="numeri-allergeni">7, 8</span>
+</h3>
+<p class="titolo-inglese">
+Burrata mozzarella and cherry tomatoes
+</p>
+<p class="descrizione">
+Burrata, pomodoro, pesto di basilico,
+rucola, origano, noci.
+</p>
+<p class="inglese">
+Burrata mozzarella, cherry tomatoes,
+basil pesto, rocket salad, oregano, walnuts.
+</p>
+<p class="prezzo">€ 10,00</p>
+</div>
+</article>
+<!-- CARPACCIO DI BARBABIETOLA -->
+<article class="piatto" data-allergeni="7,8,10">
+<img src="img/carpaccio-barbabietola.jpg"
+alt="Carpaccio di barbabietola e caprino">
+<div class="info-piatto">
+<h3>
+Carpaccio di barbabietola e caprino
+<span class="numeri-allergeni">7, 8, 10</span>
+</h3>
+<p class="titolo-inglese">
+Beetroot carpaccio and goat's cheese
+</p>
+<p class="descrizione">
+Barbabietola, lattuga, carote,
+formaggio caprino, vinaigrette,
+granella di pistacchio.
+</p>
+<p class="inglese">
+Beetroot, lettuce, carrots,
+goat's cheese, vinaigrette,
+chopped pistachios.
+</p>
+<p class="prezzo">€ 9,00</p>
+</div>
+</article>
+<!-- INSALATA CON POLLO -->
+<article class="piatto" data-allergeni="3,7">
+<img src="img/insalata-pollo.jpg"
+alt="Insalata con pollo">
+<div class="info-piatto">
+<h3>
+Insalata con pollo
+<span class="numeri-allergeni">3, 7</span>
+</h3>
+<p class="titolo-inglese">
+Chicken salad
+</p>
+<p class="descrizione">
+Lattuga, pollo, olive, scaglie di grana,
+pancetta, salsa maionese.
+</p>
+<p class="inglese">
+Lettuce, chicken, olives,
+shaved parmesan, pork belly,
+served with mayonnaise sauce.
+</p>
+<p class="prezzo">€ 10,00</p>
+</div>
+</article>
+<!-- INSALATONA MACONDO -->
+<article class="piatto" data-allergeni="4">
+<img src="img/insalatona-macondo.jpg"
+alt="Insalatona Macondo">
+<div class="info-piatto">
+<h3>
+Insalatona Macondo
+<span class="numeri-allergeni">4</span>
+</h3>
+<p class="titolo-inglese">
+Macondo salad
+</p>
+<p class="descrizione">
+Iceberg, songino, cetrioli, pomodoro,
+cipolla, tonno sott'olio, olive,
+mais e carote.
+</p>
+<p class="inglese">
+Iceberg, songino, cucumbers, tomato,
+onion, tuna in oil, olives,
+corn and carrots.
+</p>
+<p class="prezzo">€ 9,00</p>
+</div>
+</article>
+</section>
+<!-- ===================== -->
+<!--         PRIMI         -->
+<!-- ===================== -->
+<section id="primi">
+<h2>
+Primi
+<span class="inglese">• First course</span>
+</h2>
+<!-- CARBONARA -->
+<article class="piatto" data-allergeni="1,3,7">
+<img src="img/carbonara.jpg"
+alt="Pasta alla carbonara">
+<div class="info-piatto">
+<h3>
+Pasta alla carbonara
+<span class="numeri-allergeni">1, 3, 7</span>
+</h3>
+<p class="titolo-inglese">
+Carbonara pasta
+</p>
+<p class="descrizione">
+Uovo, guanciale, pecorino romano, pepe nero.
+(È possibile scegliere pasta lunga di nostra produzione)
+</p>
+<p class="inglese">
+Egg, pork cheek, pecorino romano cheese,
+black pepper. (Our homemade long pasta is available on request.)
+</p>
+<p class="prezzo">€ 12,00</p>
+</div>
+</article>
+<!-- CACIO E PEPE -->
+<article class="piatto" data-allergeni="1,7">
+<img src="img/cacio-e-pepe.jpg"
+alt="Pasta cacio e pepe">
+<div class="info-piatto">
+<h3>
+Pasta cacio e pepe
+<span class="numeri-allergeni">1, 7</span>
+</h3>
+<p class="titolo-inglese">
+Cacio e pepe pasta
+</p>
+<p class="descrizione">
+Pecorino romano, pepe nero.
+(È possibile scegliere pasta lunga di nostra produzione)
+</p>
+<p class="inglese">
+Pecorino romano cheese, black pepper. (Our homemade long pasta is available on request.)
+</p>
+<p class="prezzo">€ 11,00</p>
+</div>
+</article>
+<!-- AMATRICIANA -->
+<article class="piatto" data-allergeni="1,7">
+<img src="img/amatriciana.jpg"
+alt="Pasta alla Amatriciana">
+<div class="info-piatto">
+<h3>
+Pasta alla Amatriciana
+<span class="numeri-allergeni">1, 7</span>
+</h3>
+<p class="titolo-inglese">
+Amatriciana pasta
+</p>
+<p class="descrizione">
+Pomodoro, guanciale, pecorino romano.
+(È possibile scegliere pasta lunga di nostra produzione)
+</p>
+<p class="inglese">
+Tomato sauce, pork cheek,
+pecorino romano cheese. (Our homemade long pasta is available on request.)
+</p>
+<p class="prezzo">€ 12,00</p>
+</div>
+</article>
+<!-- GRICIA -->
+<article class="piatto" data-allergeni="1,7">
+<img src="img/gricia.jpg"
+alt="Pasta alla gricia">
+<div class="info-piatto">
+<h3>
+Pasta alla gricia
+<span class="numeri-allergeni">1, 7</span>
+</h3>
+<p class="titolo-inglese">
+Gricia pasta
+</p>
+<p class="descrizione">
+Guanciale, pecorino romano, pepe nero.
+(È possibile scegliere pasta lunga di nostra produzione)
+</p>
+<p class="inglese">
+Pork cheek, pecorino romano cheese,
+black pepper. (Our homemade long pasta is available on request.)
+</p>
+<p class="prezzo">€ 12,00</p>
+</div>
+</article>
+<!-- RISOTTO ALLA BOSCAIOLA -->
+<article class="piatto" data-allergeni="7">
+<img src="img/risotto-boscaiola.jpg"
+alt="Risotto alla boscaiola">
+<div class="info-piatto">
+<h3>
+Risotto alla boscaiola
+<span class="numeri-allergeni">7</span>
+</h3>
+<p class="titolo-inglese">
+Mushroom and sausage risotto
+</p>
+<p class="descrizione">
+Riso, funghi, salsiccia, prezzemolo,
+burro, grana padano.
+</p>
+<p class="inglese">
+Rice, mushrooms, sausage, parsley,
+butter, grana padano cheese.
+</p>
+<p class="prezzo">€ 11,00</p>
+</div>
+</article>
+<!-- TAGLIOLINI CON RAGÙ DI COSTINE -->
+<article class="piatto" data-allergeni="1,3,9">
+<img src="img/tagliolini.jpg"
+alt="Tagliolini con ragù di costine">
+<div class="info-piatto">
+<h3>
+Tagliolini con ragù di costine
+<span class="numeri-allergeni">1, 3, 9</span>
+</h3>
+<p class="titolo-inglese">
+Tagliolini with ribs ragù
+</p>
+<p class="descrizione">
+Pomodoro, sedano, cipolla, maiale.
+</p>
+<p class="inglese">
+Tomatoes, celery, onion and pork.
+</p>
+<p class="prezzo">€ 13,00</p>
+</div>
+</article>
+<!-- TONNARELLO POMODORO E BASILICO -->
+<article class="piatto" data-allergeni="1">
+<img src="img/tonnarello.jpg"
+alt="Tonnarello pomodoro e basilico">
+<div class="info-piatto">
+<h3>
+Tonnarello pomodoro e basilico
+<span class="numeri-allergeni">1</span>
+</h3>
+<p class="titolo-inglese">
+Tonnarelli with tomato and basil
+</p>
+<p class="descrizione">
+Aglio, olio evo, basilico, pomodoro.
+(È possibile scegliere pasta lunga di nostra produzione)
+</p>
+<p class="inglese">
+Garlic, extra virgin olive oil,
+basil, tomato. (Our homemade long pasta is available on request.)
+</p>
+<p class="prezzo">€ 11,00</p>
+</div>
+</article>
+<!-- FUSILLONI -->
+<article class="piatto" data-allergeni="1,3,7">
+<img src="img/fusilloni.jpg"
+alt="Fusilloni crema di peperoni, nduja e provola affumicata">
+<div class="info-piatto">
+<h3>
+Fusilloni crema di peperoni,
+'nduja e provola affumicata
+<span class="numeri-allergeni">1, 3, 7</span>
+</h3>
+<p class="titolo-inglese">
+Fusilloni with pepper cream,
+'nduja and smoked cheese
+</p>
+<p class="descrizione">
+Peperoni, pomodori, maiale,
+scamorza, grana padano.
+</p>
+<p class="inglese">
+Peppers, tomatoes, pork,
+scamorza cheese, grana padano cheese.
+</p>
+<p class="prezzo">€ 12,00</p>
+</div>
+</article>
+<!-- ZUPPA DI STAGIONE -->
+<article class="piatto" data-allergeni="da-verificare">
+<img src="img/zuppa.jpg"
+alt="Zuppa di stagione">
+<div class="info-piatto">
+<h3>
+Zuppa di stagione
+(chiedere al cameriere)
+</h3>
+<p class="titolo-inglese">
+Seasonal soup (ask the waiter)
+</p>
+<p class="prezzo">€ 9,00</p>
+</div>
+</article>
+</section>
+<!-- ===================== -->
+<!--        SECONDI        -->
+<!-- ===================== -->
+<section id="secondi">
+<h2>
+Secondi
+<span class="inglese">• Second courses</span>
+</h2>
+<!-- ROLLATA DI PANCIA DI MAIALE -->
+<article class="piatto" data-allergeni="1">
+<img src="img/rollata-maiale.jpg"
+alt="Rollata di pancia di maiale porchettata">
+<div class="info-piatto">
+<h3>
+Rollata di pancia di maiale porchettata
+servita con patate
+<span class="numeri-allergeni">1</span>
+</h3>
+<p class="titolo-inglese">
+Roasted pork belly roll served with rustic potatoes
+</p>
+<p class="prezzo">€ 15,00</p>
+</div>
+</article>
+<!-- GUANCIA DI MANZO -->
+<article class="piatto" data-allergeni="1,7,9,12">
+<img src="img/guancia-manzo.jpg"
+alt="Guancia di manzo brasata al vino rosso">
+<div class="info-piatto">
+<h3>
+Guancia di manzo brasata al vino rosso
+e crema di patate
+<span class="numeri-allergeni">1, 7, 9, 12</span>
+</h3>
+<p class="titolo-inglese">
+Braised beef cheek in red wine and potato cream
+</p>
+<p class="descrizione">
+Manzo, vino, fiocchi di patate,
+grana padano, soffritto di sedano,
+carote e cipolle.
+</p>
+<p class="inglese">
+Braised beef cheek in red wine,
+served with potato cream,
+sautéed celery, carrots and onions.
+</p>
+<p class="prezzo">€ 20,00</p>
+</div>
+</article>
+<!-- VITELLO TONNATO -->
+<article class="piatto" data-allergeni="3,4,5">
+<img src="img/vitello-tonnato.jpg"
+alt="Vitello tonnato">
+<div class="info-piatto">
+<h3>
+Vitello tonnato
+<span class="numeri-allergeni">3, 4, 5</span>
+</h3>
+<p class="titolo-inglese">
+Vitello tonné
+</p>
+<p class="descrizione">
+Vitello, salsa tonnata, cipolle agrodolce,
+capperi, uovo sodo, acciughe.
+</p>
+<p class="inglese">
+Veal, tuna sauce, pickled onions,
+capers, hard-boiled eggs, anchovies.
+</p>
+<p class="prezzo">€ 16,00</p>
+</div>
+</article>
+<!-- CAVOLFIORE ALLA PIASTRA -->
+<article class="piatto" data-allergeni="da-verificare">
+<img src="img/cavolfiore.jpg"
+alt="Cavolfiore alla piastra in salsa salmoriglio">
+<div class="info-piatto">
+<h3>
+Cavolfiore alla piastra in salsa salmoriglio
+</h3>
+<p class="titolo-inglese">
+Grilled cauliflower in salmoriglio sauce
+</p>
+<p class="descrizione">
+Cavolfiore, olio, prezzemolo,
+origano, aceto, aglio.
+</p>
+<p class="inglese">
+Cauliflower, oil, parsley,
+oregano, vinegar, garlic.
+</p>
+<p class="prezzo">€ 11,00</p>
+</div>
+</article>
+<!-- HAMBURGER -->
+<article class="piatto" data-allergeni="1,3,7">
+<img src="img/hamburger.jpg"
+alt="Hamburger con scamorza affumicata e pancetta">
+<div class="info-piatto">
+<h3>
+Hamburger, scamorza affumicata,
+cipolla caramellata, pancetta
+<span class="numeri-allergeni">1, 3, 7</span>
+</h3>
+<p class="titolo-inglese">
+Hamburger, smoked scamorza cheese,
+caramelized onions, pork belly
+</p>
+<p class="descrizione">
+Manzo, scamorza, cipolla, maiale.
+</p>
+<p class="inglese">
+Beef, scamorza cheese,
+onion, pork belly.
+</p>
+<p class="prezzo">€ 15,00</p>
+</div>
+</article>
+<!-- BACCALÀ IN TEMPURA -->
+<article class="piatto" data-allergeni="1,3,4,5">
+<img src="img/baccala.jpg"
+alt="Baccalà in tempura e giardiniera di verdure">
+<div class="info-piatto">
+<h3>
+Baccalà in tempura e giardiniera
+di verdure agrodolce,
+maionese al lime
+<span class="numeri-allergeni">1, 3, 4, 5</span>
+</h3>
+<p class="titolo-inglese">
+Salted cod in tempura,
+pickled vegetables and lime mayonnaise
+</p>
+<p class="descrizione">
+Baccalà, cipolla, carote,
+cetriolo, maionese.
+</p>
+<p class="inglese">
+Salted cod, onion, carrot, cucumber,
+served with mayonnaise.
+</p>
+<p class="prezzo">€ 14,00</p>
+</div>
+</article>
+<!-- CARNE ALLA GRIGLIA -->
+<article class="piatto" data-allergeni="da-verificare">
+<img src="img/carne-griglia.jpg"
+alt="Carne alla griglia">
+<div class="info-piatto">
+<h3>Carne alla griglia</h3>
+<!-- BISTECCA DI MANZO -->
+<div class="tipo-carne">
+<h4>Bistecca di manzo</h4>
+<p class="titolo-inglese">
+Grilled beef steak
+</p>
+<p class="prezzo">€ 14,00</p>
+</div>
+<!-- FILETTO DI MANZO -->
+<div class="tipo-carne">
+<h4>Filetto di manzo</h4>
+<p class="titolo-inglese">
+Grilled fillet of beef
+</p>
+<p class="prezzo">€ 20,00</p>
+</div>
+<!-- ENTRECÔTE BLACK ANGUS -->
+<div class="tipo-carne">
+<h4>Entrecôte Black Angus</h4>
+<p class="titolo-inglese">
+Black Angus entrecôte
+</p>
+<p class="prezzo">€ 18,00</p>
+</div>
+<!-- POLLO / TACCHINO -->
+<div class="tipo-carne">
+<h4>Pollo / Tacchino</h4>
+<p class="titolo-inglese">
+Grilled chicken / turkey
+</p>
+<p class="prezzo">€ 11,00</p>
+</div>
+</div>
+</article>
+</section>
+<!-- =============================== -->
+<!--       LEGENDA ALLERGENI         -->
+<!-- =============================== -->
+<section id="legenda-allergeni">
+<h2>Allergeni • Allergens • Alérgenos</h2>
+<p class="introduzione-allergeni">
+Consulta le informazioni sugli allergeni
+nella lingua che preferisci.
+</p>
+<!-- ITALIANO -->
+<details class="lingua-allergeni" open>
+<summary>🇮🇹 Italiano</summary>
+<h3>
+Sostanze o prodotti che provocano
+allergie o intolleranze
+</h3>
+<ol class="lista-allergeni">
+<li>
+<strong>Cereali contenenti glutine</strong>,
+cioè: grano, segale, orzo, avena, farro,
+kamut o i loro ceppi ibridati e prodotti derivati,
+tranne:
+<ol type="a">
+<li>Sciroppi di glucosio a base di grano, incluso destrosio.</li>
+<li>Maltodestrine a base di grano.</li>
+<li>Sciroppi di glucosio a base di orzo.</li>
+<li>
+Cereali utilizzati per la fabbricazione
+di distillati alcolici, incluso l'alcol
+etilico di origine agricola.
+</li>
+</ol>
+</li>
+<li>
+<strong>Crostacei</strong> e prodotti a base di crostacei.
+</li>
+<li>
+<strong>Uova</strong> e prodotti a base di uova.
+</li>
+<li>
+<strong>Pesce</strong> e prodotti a base di pesce,
+tranne:
+<ol type="a">
+<li>
+Gelatina di pesce utilizzata come supporto
+per preparati di vitamine o carotenoidi.
+</li>
+<li>
+Gelatina o colla di pesce usata come
+chiarificante nella birra e nel vino.
+</li>
+</ol>
+</li>
+<li>
+<strong>Arachidi</strong> e prodotti a base di arachidi.
+</li>
+<li>
+<strong>Soia</strong> e prodotti a base di soia,
+tranne:
+<ol type="a">
+<li>Olio e grasso di soia raffinato.</li>
+<li>
+Tocoferoli misti naturali (E306),
+tocoferolo D-alfa naturale,
+tocoferolo acetato D-alfa naturale,
+tocoferolo succinato D-alfa naturale
+a base di soia.
+</li>
+<li>
+Oli vegetali derivati da fitosteroli
+e fitosteroli esteri a base di soia.
+</li>
+<li>
+Estere di stanolo vegetale prodotto
+da steroli di olio vegetale a base di soia.
+</li>
+</ol>
+</li>
+<li>
+<strong>Latte</strong> e prodotti a base di latte
+(incluso il lattosio), tranne:
+<ol type="a">
+<li>
+Siero di latte utilizzato per la produzione
+di distillati alcolici, incluso l'alcol
+etilico di origine agricola.
+</li>
+<li>Lattiolo.</li>
+</ol>
+</li>
+<li>
+<strong>Frutta a guscio</strong>, vale a dire:
+mandorle (Amygdalus communis L.),
+nocciole (Corylus avellana),
+noci (Juglans regia),
+noci di acagiù (Anacardium occidentale),
+noci pecan [Carya illinoinensis (Wangenh.) K. Koch],
+noci del Brasile (Bertholletia excelsa),
+pistacchi (Pistacia vera),
+noci macadamia o noci del Queensland
+(Macadamia ternifolia) e i loro prodotti,
+tranne la frutta a guscio utilizzata
+per la produzione di distillati alcolici,
+incluso l'alcol etilico di origine agricola.
+</li>
+<li>
+<strong>Sedano</strong> e prodotti a base di sedano.
+</li>
+<li>
+<strong>Senape</strong> e prodotti a base di senape.
+</li>
+<li>
+<strong>Semi di sesamo</strong>
+e prodotti a base di semi di sesamo.
+</li>
+<li>
+<strong>Anidride solforosa e solfiti</strong>
+in concentrazione superiore a 10 mg/kg
+o 10 mg/litro in termini di SO2 totale,
+da calcolarsi per i prodotti così come proposti
+pronti al consumo o ricostituiti conformemente
+alle istruzioni dei fabbricanti.
+</li>
+<li>
+<strong>Lupini</strong> e prodotti a base di lupini.
+</li>
+<li>
+<strong>Molluschi</strong> e prodotti a base di molluschi.
+</li>
+</ol>
+<p class="nota-allergeni">
+* A disposizione il libro degli ingredienti.
+</p>
+</details>
+<!-- INGLESE -->
+<details class="lingua-allergeni" lang="en">
+<summary>🇬🇧 English</summary>
+<h3>
+Substances or products causing
+allergies or intolerance
+</h3>
+<ol class="lista-allergeni">
+<li>
+<strong>Cereals containing gluten</strong>,
+such as wheat, rye, barley, oats, spelt,
+kamut or their hybridized strains and
+derived products, except:
+<ol type="a">
+<li>
+Wheat-based glucose syrups,
+including dextrose.
+</li>
+<li>Wheat-based maltodextrins.</li>
+<li>Barley-based glucose syrups.</li>
+<li>
+Cereals used for the manufacture
+of alcoholic distillates,
+including ethyl alcohol of
+agricultural origin.
+</li>
+</ol>
+</li>
+<li>
+<strong>Crustaceans</strong>
+and crustacean products.
+</li>
+<li>
+<strong>Eggs</strong> and egg products.
+</li>
+<li>
+<strong>Fish</strong> and fish-based products,
+except:
+<ol type="a">
+<li>
+Fish gelatine used as a carrier
+for preparations of vitamins
+or carotenoids.
+</li>
+<li>
+Gelatine or isinglass used
+as a fining agent in beer or wine.
+</li>
+</ol>
+</li>
+<li>
+<strong>Peanuts</strong> and peanut products.
+</li>
+<li>
+<strong>Soybeans</strong> and soybean products,
+except:
+<ol type="a">
+<li>Refined soybean oil and fat.</li>
+<li>
+Natural mixed tocopherols (E306),
+natural D-alpha tocopherol,
+natural D-alpha tocopherol acetate,
+natural D-alpha tocopherol succinate
+from soy.
+</li>
+<li>
+Vegetable oils derived from phytosterols
+and soy-based phytosterol esters.
+</li>
+<li>
+Plant stanol ester produced from
+soybean-based vegetable oil sterols.
+</li>
+</ol>
+</li>
+<li>
+<strong>Milk</strong> and milk products
+(including lactose), except:
+<ol type="a">
+<li>
+Whey used for making alcoholic
+distillates, including ethyl alcohol
+of agricultural origin.
+</li>
+<li>Lactitol.</li>
+</ol>
+</li>
+<li>
+<strong>Nuts</strong>, namely:
+almonds (Amygdalus communis L.),
+hazelnuts (Corylus avellana),
+walnuts (Juglans regia),
+cashew nuts (Anacardium occidentale),
+pecans [Carya illinoinensis (Wangenh.) K. Koch],
+Brazil nuts (Bertholletia excelsa),
+pistachios (Pistacia vera),
+macadamia nuts or Queensland nuts
+(Macadamia ternifolia),
+and products thereof,
+except nuts used for making alcoholic
+distillates, including ethyl alcohol
+of agricultural origin.
+</li>
+<li>
+<strong>Celery</strong> and celery products.
+</li>
+<li>
+<strong>Mustard</strong> and mustard products.
+</li>
+<li>
+<strong>Sesame seeds</strong>
+and sesame seed products.
+</li>
+<li>
+<strong>Sulphur dioxide and sulphites</strong>
+in concentrations higher than 10 mg/kg
+or 10 mg/litre in terms of total SO2,
+calculated for products as offered ready
+for consumption or reconstituted according
+to the manufacturer's instructions.
+</li>
+<li>
+<strong>Lupins</strong> and lupin products.
+</li>
+<li>
+<strong>Molluscs</strong> and mollusc products.
+</li>
+</ol>
+<p class="nota-allergeni">
+* Ingredient book available.
+</p>
+</details>
+<!-- SPAGNOLO -->
+<details class="lingua-allergeni" lang="es">
+<summary>🇪🇸 Español</summary>
+<h3>
+Sustancias y productos que causan
+alergias o intolerancias
+</h3>
+<ol class="lista-allergeni">
+<li>
+<strong>Cereales que contienen gluten</strong>,
+es decir: trigo, centeno, cebada, avena,
+espelta, kamut o sus variedades híbridas
+y productos derivados, excepto:
+<ol type="a">
+<li>
+Jarabes de glucosa a base de trigo,
+incluida la dextrosa.
+</li>
+<li>Maltodextrinas a base de trigo.</li>
+<li>Jarabes de glucosa a base de cebada.</li>
+<li>
+Cereales utilizados para la fabricación
+de destilados alcohólicos, incluido
+el alcohol etílico de origen agrícola.
+</li>
+</ol>
+</li>
+<li>
+<strong>Crustáceos</strong>
+y productos a base de crustáceos.
+</li>
+<li>
+<strong>Huevos</strong> y ovoproductos.
+</li>
+<li>
+<strong>Pescado</strong>
+y productos a base de pescado, excepto:
+<ol type="a">
+<li>
+Gelatina de pescado utilizada como
+soporte para preparados de vitaminas
+o carotenoides.
+</li>
+<li>
+Gelatina o cola de pescado utilizada
+como agente clarificante en cerveza o vino.
+</li>
+</ol>
+</li>
+<li>
+<strong>Cacahuetes</strong>
+y productos a base de cacahuetes.
+</li>
+<li>
+<strong>Soja</strong> y productos de soja,
+excepto:
+<ol type="a">
+<li>Aceite y grasa de soja refinados.</li>
+<li>
+Tocoferoles mixtos naturales (E306),
+D-alfa tocoferol natural,
+acetato de D-alfa tocoferol natural,
+succinato de D-alfa tocoferol natural
+derivados de la soja.
+</li>
+<li>
+Aceites vegetales derivados de fitoesteroles
+y ésteres de fitoesteroles a base de soja.
+</li>
+<li>
+Éster de estanol vegetal producido
+a partir de esteroles de aceite vegetal
+a base de soja.
+</li>
+</ol>
+</li>
+<li>
+<strong>Leche</strong> y productos lácteos
+(incluida la lactosa), excepto:
+<ol type="a">
+<li>
+Suero utilizado para la elaboración
+de destilados alcohólicos,
+incluido el alcohol etílico
+de origen agrícola.
+</li>
+<li>Lactitol.</li>
+</ol>
+</li>
+<li>
+<strong>Frutos de cáscara</strong>, en concreto:
+almendras (Amygdalus communis L.),
+avellanas (Corylus avellana),
+nueces (Juglans regia),
+anacardos (Anacardium occidentale),
+pacanas [Carya illinoinensis (Wangenh.) K. Koch],
+nueces de Brasil (Bertholletia excelsa),
+pistachos (Pistacia vera),
+nueces de macadamia o nueces de Queensland
+(Macadamia ternifolia),
+y productos derivados,
+excepto los frutos de cáscara utilizados
+para la elaboración de destilados alcohólicos,
+incluido el alcohol etílico de origen agrícola.
+</li>
+<li>
+<strong>Apio</strong>
+y productos a base de apio.
+</li>
+<li>
+<strong>Mostaza</strong>
+y productos a base de mostaza.
+</li>
+<li>
+<strong>Semillas de sésamo</strong>
+y productos a base de semillas de sésamo.
+</li>
+<li>
+<strong>Dióxido de azufre y sulfitos</strong>
+en concentraciones superiores a 10 mg/kg
+o 10 mg/litro en términos de SO2 total,
+calculado para los productos listos
+para el consumo o reconstituidos
+según las instrucciones del fabricante.
+</li>
+<li>
+<strong>Altramuces</strong>
+y productos derivados del altramuz.
+</li>
+<li>
+<strong>Moluscos</strong>
+y productos derivados de moluscos.
+</li>
+</ol>
+<p class="nota-allergeni">
+* Libro de ingredientes disponible.
+</p>
+</details>
+<!-- NOTA PRODOTTI SURGELATI -->
+<p class="nota-surgelati">
+* Prodotto surgelato all'origine.
+</p>
+</section>
+</main>
+<footer>
+<h2>Osteria Macondo</h2>
+<p class="footer-sottotitolo">Sapori autentici, tradizione e convivialità</p>
+<div class="footer-contatti">
+<div>
+<h3>Dove siamo</h3>
+<p>📍 Via Dei Mille 10,00185,ROMA</p>
+</div>
+<div>
+<h3>Contattaci</h3>
+<p>📞 <a href="tel:+3906491425">06491425</a></p>
+<p>Per info:</p>
+<p>✉️ <a href="mailto:osteriamacondo@gmail.com">osteriamacondo@gmail.com</a></p>
+<p>Per prenotazioni:</p>
+<p>✉️ <a href="mailto:prenotazioni@osteriamacondo@gmail.com">prenotazioni@osteriamacondo@gmail.com</a></p>
+</div>
+<div>
+<h3>Seguici</h3>
+<p>📷 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+<p>ⓕ <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></p>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
