@@ -709,7 +709,7 @@ header .logo {
 }
 @font-face {
     font-family: "Brusher";
-    src: url("font/Brusher.ttf") format("truetype");
+    src: url("Brusher.ttf") format("truetype");
 }
 header .pulsante-menu {
     background-color:   #3B3028;
